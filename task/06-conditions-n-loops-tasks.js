@@ -46,6 +46,7 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
+    return (n != 1) ? n * getFactorial(n - 1) : 1;
     throw new Error('Not implemented');
 }
 
@@ -63,7 +64,11 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+    let s=0;
+    for(;n1<=n2;n1++){
+        s += n1;
+    }
+    return s;
 }
 
 
@@ -209,6 +214,7 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
+    return str.split('').reverse().join('')
     throw new Error('Not implemented');
 }
 
@@ -226,7 +232,11 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+    let arr=[];
+    for(;num%10!=0; num =Math.floor(num/10)){
+        arr.push(num%10);
+    }
+    return arr.join("");
 }
 
 
@@ -270,6 +280,18 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
+    /*let sum = 0;
+    for(;num%10!=0; num =Math.floor(num/10)){
+        sum= sum + (num%10);
+    }
+    if (sum>9){
+        num = sum;
+        getDigitalRoot(num); 
+    }
+    else{
+        return sum;
+    }
+*/
     throw new Error('Not implemented');
 }
 
