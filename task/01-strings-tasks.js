@@ -254,13 +254,12 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-    /*let s = typeof value;
-    
-    if (s === "string" ){
+    let s = typeof value;
+    let p = s === "object" && value!=null && typeof value[0] === "string";
+    if (s === "string" || p ){
         return true;
     }
-    else {return false;}*/
-    throw new Error('Not implemented');
+    else {return false;}
 }
 
 
